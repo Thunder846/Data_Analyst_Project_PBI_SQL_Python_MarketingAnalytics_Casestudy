@@ -26,3 +26,8 @@ WITH DuplicateRecords AS (
     FROM 
         dbo.customer_journey  
 )
+
+SELECT *
+FROM DuplicateRecords
+ORDER BY JourneyID
+-- WHERE row_num > 1  -- Filters out the first occurrence (row_num = 1) and only shows the duplicates (row_num > 1)
